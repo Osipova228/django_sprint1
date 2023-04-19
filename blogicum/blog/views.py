@@ -47,8 +47,8 @@ posts = [
 # Create your views here.
 def index(request):
     template = 'blog/index.html'
-    list_posts = list(reversed(posts))
-    context = {'posts': list_posts}
+    reversed_posts = reversed(posts)
+    context = {'posts': reversed_posts}
     return render(request, template, context)
 
 
