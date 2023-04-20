@@ -5,8 +5,7 @@
         <h1>Лента записей</h1>                        
         {% for post in posts %}
             {% include 'includes/posts.html' %}
-                <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
-            </article>
+            <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
             {% if not forloop.last %}
                 <hr>
             {% endif %}
